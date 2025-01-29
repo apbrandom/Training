@@ -7,11 +7,27 @@
 
 import SwiftUI
 
+extension Image {
+    func imageModifier() -> some View {
+        self
+            .resizable()
+            .scaledToFit()
+            .padding(40)
+    }
+    
+    func iconModifier() -> some View {
+        self
+            .imageModifier()
+            .frame(maxWidth: 128)
+            .foregroundColor(.purple)
+    }
+}
+
 struct ContentView: View {
-    private let imageURL: String = "https://credo.academy/credo-academy@3x.png"
-   
+    private let imageURL: String = "https://credo.academy/credo-academy@3x.pn"
+    
     var body: some View {
-//       1. AsyncImage(url: URL(string: imageURL))
+        //       1. AsyncImage(url: URL(string: imageURL))
         
         AsyncImage(url: URL(string: imageURL)) { phase in
             switch phase {
@@ -20,15 +36,10 @@ struct ContentView: View {
                 ProgressView() // Индикатор загрузки
             case .success(let image):
                 // Показываем загруженное изображение
-                image
-                    .resizable()
-                    .scaledToFit()
+                image.imageModifier()
             case .failure:
                 // Показываем сообщение об ошибке
-                Image(systemName: "xmark.circle")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundColor(.red)
+                Image(systemName: "xmark.circle").iconModifier()
             @unknown default:
                 EmptyView()
             }

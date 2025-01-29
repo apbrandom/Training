@@ -11,9 +11,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CBE1B85E2D497DB200E84BDD /* 28.01.2025 */ = {
+		CBE1B85E2D497DB200E84BDD /* SwiftUI training */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = 28.01.2025;
+			path = "SwiftUI training";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		CBE1B8532D497DB200E84BDD = {
 			isa = PBXGroup;
 			children = (
-				CBE1B85E2D497DB200E84BDD /* 28.01.2025 */,
+				CBE1B85E2D497DB200E84BDD /* SwiftUI training */,
 				CBE1B85D2D497DB200E84BDD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				CBE1B85E2D497DB200E84BDD /* 28.01.2025 */,
+				CBE1B85E2D497DB200E84BDD /* SwiftUI training */,
 			);
 			name = 28.01.2025;
 			packageProductDependencies = (
